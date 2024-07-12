@@ -27,7 +27,7 @@ public class Wellcome2Activity extends AppCompatActivity {
             return insets;
         });
         tv_Login = findViewById(R.id.tv_Login);
-        btn_getstarted = findViewById(R.id.btn_getstarted);
+        btn_getstarted = findViewById(R.id.btn_getStarted);
 
         tv_Login.setOnClickListener(v -> {
             Intent intent = new Intent(Wellcome2Activity.this, LoginActivity.class);

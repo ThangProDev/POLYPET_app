@@ -70,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
         AlertDialog dialog = builder.create();
 
         // Thiết lập các thành phần của dialog
-        EditText input = dialogView.findViewById(R.id.edt_forgotemail);
+        EditText input = dialogView.findViewById(R.id.edt_forgotemail_user);
         Button button = dialogView.findViewById(R.id.btn_sendotp);
 
         // Thiết lập hành động cho button

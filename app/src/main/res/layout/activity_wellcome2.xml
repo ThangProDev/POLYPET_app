@@ -52,7 +52,7 @@
             android:fontFamily="@font/fredoka_regular"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_getstarted"
+            android:id="@+id/btn_getStarted"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_cam_btn"

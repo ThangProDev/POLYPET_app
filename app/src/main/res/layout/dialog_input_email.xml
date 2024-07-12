@@ -18,7 +18,7 @@
         android:layout_marginTop="50sp"/>
 
     <EditText
-        android:id="@+id/edt_forgotemail"
+        android:id="@+id/edt_forgotemail_user"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="24sp"

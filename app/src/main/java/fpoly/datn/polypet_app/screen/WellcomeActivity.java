@@ -24,8 +24,8 @@ public class WellcomeActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        btn_skip = findViewById(R.id.btn_skip);
-        btn_next = findViewById(R.id.btn_next);
+        btn_skip = findViewById(R.id.btn_Skip);
+        btn_next = findViewById(R.id.btn_Next);
 
         btn_next.setOnClickListener(v -> {
             Intent intent = new Intent(WellcomeActivity.this, Wellcome2Activity.class);

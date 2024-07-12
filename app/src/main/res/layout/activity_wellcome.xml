@@ -9,7 +9,7 @@
     android:background="@drawable/background_w1">
 
     <Button
-        android:id="@+id/btn_skip"
+        android:id="@+id/btn_Skip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/xam"
@@ -52,7 +52,7 @@
             android:fontFamily="@font/fredoka_regular"/>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_next"
+            android:id="@+id/btn_Next"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"

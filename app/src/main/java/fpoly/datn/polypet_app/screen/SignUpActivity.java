@@ -36,8 +36,8 @@ public class SignUpActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        btn_signup = findViewById(R.id.btn_signup);
-        txt_signin = findViewById(R.id.txt_signin);
+        btn_signup = findViewById(R.id.btn_signUp);
+        txt_signin = findViewById(R.id.txt_signIn);
         txt_signin.setOnClickListener(v -> {
             Intent intent = new Intent(SignUpActivity.this, LoginActivity.class);
             startActivity(intent);

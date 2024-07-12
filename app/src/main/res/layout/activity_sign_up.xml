@@ -93,7 +93,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_signup"
+        android:id="@+id/btn_signUp"
         style="@android:style/Widget.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/txt_signin"
+            android:id="@+id/txt_signIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
