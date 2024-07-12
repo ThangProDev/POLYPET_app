@@ -13,13 +13,7 @@
         android:theme="@style/Theme.POLYPET_app"
         tools:targetApi="31">
         <activity
-            android:name=".screen.Wellcome2Activity"
-            android:exported="false" />
-        <activity
-            android:name=".screen.WellcomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".screen.StartActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".screen.SignUpActivity"
@@ -28,10 +22,16 @@
             android:name=".screen.LoginActivity"
             android:exported="false" />
         <activity
+            android:name=".screen.Wellcome2Activity"
+            android:exported="false" />
+        <activity
+            android:name=".screen.WellcomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".screen.CartActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".screen.StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
