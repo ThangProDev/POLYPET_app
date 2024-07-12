@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="camC">#FE620B</color>
+    <color name="camM">#FFBD97</color>
+    <color name="xam">#D9D9D9</color>
+    <color name="xamD">#4A4A4A</color>
 </resources>

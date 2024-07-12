@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/btnHome"
+        android:icon="@drawable/ic_home"
+        android:title="@string/txt_home"/>
+
+    <item android:id="@+id/btnFavourite"
+        android:icon="@drawable/heart"
+        android:title="@string/txt_favourite"/>
+
+    <item android:id="@+id/btnNotification"
+        android:icon="@drawable/ic_bell28"
+        android:title="@string/txt_notification"/>
+
+    <item android:id="@+id/btnProfile"
+        android:icon="@drawable/ic_profile28"
+        android:title="@string/txt_profile"/>
+
+</menu>

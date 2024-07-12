@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">POLYPET_app</string>
+    <string name="app_name">PolyPet</string>
+    <string name="txt_home">Home</string>
+    <string name="txt_favourite">Favourite</string>
+    <string name="txt_notification">Notification</string>
+    <string name="txt_profile">Profile</string>
+    <string name="txt_flash_sale">FLASH SALE</string>
+    <string name="txt_suggest">SUGGEST</string>
+    <string name="txt_view">xem</string>
+    <string name="txt_tai_khoan_bao_mat"><![CDATA[Tài khoản & Bảo Mật]]></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
