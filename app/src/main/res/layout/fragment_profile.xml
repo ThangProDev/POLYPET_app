@@ -1,14 +1,424 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.ProfileFragment">
+    tools:context=".fragment.ProfileFragment"
+    android:background="@color/xam">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="120dp"
+        android:background="@drawable/bg_bottom_left_right"
+        android:backgroundTint="#FE620B"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
 
-</FrameLayout>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/lytImage"
+            android:layout_width="65sp"
+            android:layout_height="65sp"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20sp"
+            app:cardCornerRadius="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imgUser"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:fontFamily="@font/fredoka_bold"
+            android:text="User name"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintStart_toEndOf="@id/lytImage"
+            app:layout_constraintTop_toTopOf="@id/lytImage" />
+
+        <TextView
+            android:id="@+id/txtCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="00 đã mua"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/lytImage"
+            app:layout_constraintTop_toBottomOf="@id/userName" />
+
+        <TextView
+            android:id="@+id/txtCountLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="5sp"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="00 đã thích"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toEndOf="@id/txtCount"
+            app:layout_constraintTop_toBottomOf="@id/userName" />
+
+        <ImageView
+            android:id="@+id/btnSettings"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginEnd="16sp"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintBottom_toBottomOf="@id/lytImage"
+            app:layout_constraintEnd_toStartOf="@id/btn_Cart"
+            app:layout_constraintTop_toTopOf="@id/lytImage"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/btn_Cart"
+            android:layout_width="24sp"
+            android:layout_height="24sp"
+            android:layout_marginEnd="16sp"
+            android:src="@drawable/ic_cart"
+            app:layout_constraintBottom_toBottomOf="@id/lytImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/lytImage"
+            app:tint="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lyt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20sp"
+                android:background="@drawable/bg_round_20dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:fontFamily="@font/fredoka_bold"
+                    android:text="Cài đặt"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:layout_marginTop="10sp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_taikhoan_baomat"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:drawableEnd="@drawable/ic_arrow_forward_24"
+                    android:fontFamily="@font/fredoka_regular"
+                    android:text="@string/txt_tai_khoan_bao_mat"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_diachi"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_forward_24"
+                    android:fontFamily="@font/fredoka_regular"
+                    android:text="Địa chỉ"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/thanhtoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_forward_24"
+                    android:fontFamily="@font/fredoka_regular"
+                    android:text="Tài khoản thanh toán"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:id="@+id/tv_logout"
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_forward_24"
+                    android:fontFamily="@font/fredoka_regular"
+                    android:text="Đăng xuất" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:background="@drawable/bg_round_20dp"
+                android:orientation="vertical"
+                android:padding="10sp"
+                app:layout_constraintTop_toBottomOf="@id/lyt1">
+
+                <LinearLayout
+                    android:id="@+id/ln_oder"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10sp"
+                        android:fontFamily="@font/fredoka_bold"
+                        android:text="Đơn mua"
+                        android:textColor="#FE620B"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/btn_Confirm"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="65sp"
+                            android:layout_height="65sp"
+                            android:src="@drawable/ic_verify" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:fontFamily="@font/fredoka_regular"
+                            android:text="Chờ xác nhận"
+                            android:textColor="#000000"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_Waiting"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="65sp"
+                            android:layout_height="65sp"
+                            android:src="@drawable/ic_waiting" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:fontFamily="@font/fredoka_regular"
+                            android:text="Chờ lấy hàng"
+                            android:textColor="#000000"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btn_Shipping"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="65sp"
+                            android:layout_height="65sp"
+                            android:src="@drawable/ic_shipping" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:fontFamily="@font/fredoka_regular"
+                            android:text="Chờ giao hàng"
+                            android:textColor="#000000"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnRate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="65sp"
+                            android:layout_height="65sp"
+                            android:src="@drawable/ic_rating" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10sp"
+                            android:fontFamily="@font/fredoka_regular"
+                            android:text="Đánh giá"
+                            android:textColor="#000000"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lyt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:paddingBottom="10sp"
+                android:background="@drawable/bg_round_20dp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/lyt3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:fontFamily="@font/fredoka_bold"
+                    android:text="Hỗ trợ"
+                    android:textSize="18sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_forward_24"
+                    android:fontFamily="@font/fredoka_regular"
+                    android:text="Thông tin hỗ trợ"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_forward_24"
+                    android:fontFamily="@font/fredoka_regular"
+                    android:text="Tiêu chuẩn cộng đồng"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_forward_24"
+                    android:fontFamily="@font/fredoka_regular"
+                    android:text="Điều khoản"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#000000" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50sp"
+                    android:paddingLeft="10sp"
+                    android:paddingRight="10sp"
+                    android:textSize="15sp"
+                    android:gravity="center_vertical"
+                    android:drawableEnd="@drawable/ic_arrow_forward_24"
+                    android:fontFamily="@font/fredoka_regular"
+                    android:text="Giới thiệu" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
