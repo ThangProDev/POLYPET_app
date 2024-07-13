@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.MangeFragment">
+    tools:context=".fragment.MangeFragment"
+    android:orientation="vertical"
+    >
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_bottom_left_right"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="THÔNG BÁO"
+                android:textSize="25sp"
+                android:layout_margin="10sp"
+                android:fontFamily="@font/fredoka_bold"
+                android:textColor="@color/camC"/>
+            <Space
+                android:layout_width="0sp"
+                android:layout_height="0sp"
+                android:layout_weight="1"/>
+            <ImageView
+                android:id="@+id/btnCart"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_cart"
+                android:layout_margin="20sp"
+                />
+        </LinearLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_noti"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_bottom_left_right"
+            app:tabTextColor="@color/black"
+            app:tabIndicatorColor="@color/camC"
+            app:tabTextAppearance="@style/TabTextAppearance"
+            >
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông báo của tôi"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thông báo POLYPET"/>
+        </com.google.android.material.tabs.TabLayout>
+    </LinearLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</FrameLayout>
+    </androidx.viewpager.widget.ViewPager>
+</LinearLayout>

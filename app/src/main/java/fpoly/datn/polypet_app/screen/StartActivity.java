@@ -1,6 +1,8 @@
 package fpoly.datn.polypet_app.screen;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,5 +24,17 @@ public class StartActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        // Sử dụng Handler để chuyển màn hình sau 2 giây
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                // Chuyển đến WellcomeActivity
+                Intent intent = new Intent(StartActivity.this, WellcomeActivity.class);
+                startActivity(intent);
+                // Kết thúc StartActivity để không thể quay lại
+                finish();
+            }
+        }, 2000); // 2000 milliseconds = 2 seconds
+
     }
 }
